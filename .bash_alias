@@ -1,0 +1,2 @@
+WS_PATH=`cd ~;pwd`/Workspace
+alias ws="cd $WS_PATH"
