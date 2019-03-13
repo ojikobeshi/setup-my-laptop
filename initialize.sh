@@ -2,7 +2,7 @@ if [ ! -e /usr/local/bin/brew ]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo "source ~/.bash_alias" > ~/.bash_profile
+[ ! -e "~/.bash_profile" ] && echo "source ~/.bash_alias" > ~/.bash_profile
 ln -sfn `pwd`/.bash_alias ~/.bash_alias
 source ~/.bash_alias
 
