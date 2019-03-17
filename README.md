@@ -1,6 +1,13 @@
 # minimum setup
 run `bash initialize.sh`
 
+```
+bash initialize.sh
+bash set-my-tools.sh
+bash set-my-comm.sh
+```
+
+
 # reference
 https://sourabhbajaj.com/mac-setup/
 

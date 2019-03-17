@@ -7,7 +7,7 @@
 [ ! -e "/Applications/Google Chrome.app" ] && brew cask install google-chrome
 
 [ ! -e "/Applications/Google Chrome Canary.app" ] && brew cask install homebrew/cask-versions/google-chrome-canary
-brew cask install firefox
-brew cask install firefox-developer-edition
+[ ! -e "/Applications/Firefox.app" ] && brew cask install firefox
+[ ! -e "/Applications/Firefox Developer Edition.app" ] && brew cask install firefox-developer-edition
 
-brew cask install android-studio
+[ ! -e "/Applications/Android Studio.app" ] && brew cask install android-studio
