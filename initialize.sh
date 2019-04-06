@@ -1,6 +1,6 @@
-if [ ! -e /usr/local/bin/brew ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+[ ! -e /usr/local/bin/brew ] && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+[ ! -e /Library/Developer/CommandLineTools/usr/bin/xcrun ] && /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 [ ! -e "~/.bash_profile" ] && echo "source ~/.bash_alias" > ~/.bash_profile
 ln -sfn `pwd`/.bash_alias ~/.bash_alias
