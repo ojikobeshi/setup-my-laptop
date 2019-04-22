@@ -1,14 +1,3 @@
-# brew install php-cs-fixer 
-# brew install composer
-
-[ -e `which code` ] && code --install-extension DavidAnson.vscode-markdownlint
-[ -e `which code` ] && code --install-extension letmaik.git-tree-compare
-[ -e `which code` ] && code --install-extension eamodio.gitlens
-# [ -e `which code` ] && code --install-extension esbenp.prettier-vscode
-[ -e `which code` ] && code --install-extension hookyqr.beautify
-
-
-
 [ ! -e "/Applications/Spectacle.app" ] && brew cask install spectacle
 [ ! -e "/Applications/Google Chrome.app" ] && brew cask install google-chrome
 
