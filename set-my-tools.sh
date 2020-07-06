@@ -17,15 +17,22 @@ brew cask install vagrant
 # install virtualbox; requires security permission via preferences
 brew cask install virtualbox virtualbox-extension-pack
 
-if [ ! -e "~/.bash_it/install.sh" ]; then
+if [ ! -e "${HOME}/.bash_it/install.sh" ]; then
     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
     bash ~/.bash_it/install.sh
 fi
 
-# in case needing git-completion, check .bash_profile for the following
-# if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-#   . /usr/local/etc/bash_completion.d/git-completion.bash
-# fi
+# brew install bash-completion
+
+GIT_COMPLETION_ADDED="## added bash_profile_git_completion"
+
+echo "Last 10 lines of current bash_profile"
+tail -10  ~/.bash_profile
+
+if [ -z `grep "${GIT_COMPLETION_ADDED}" ~/.bash_profile` ]; then
+    cat `pwd`/.bash_profile_git-completion >> ~/.bash_profile
+    echo "Current bash_profile updated."
+fi
 
 # https://docs.cloudfoundry.org/cf-cli/install-go-cli.html
 brew tap cloudfoundry/tap

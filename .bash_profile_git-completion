@@ -1,6 +1,15 @@
+
 # in case needing git-completion, check .bash_profile for the following
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-  . /usr/local/etc/bash_completion.d/git-completion.bash
+GIT_COMPLETION_BASH=/usr/local/etc/bash_completion.d/git-completion.bash
+if [ -f "${GIT_COMPLETION_BASH}" ]; then
+  . ${GIT_COMPLETION_BASH}
+else
+    GIT_COMPLETION_BASH=/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+    if [ -f "${GIT_COMPLETION_BASH}" ]; then
+        . ${GIT_COMPLETION_BASH}
+    else 
+        echo "xxxxxx Can't find git-completion but git location is: `which git`" 
+    fi
 fi
 
 ## added bash_profile_git_completion
