@@ -1,0 +1,6 @@
+# in case needing git-completion, check .bash_profile for the following
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  . /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
+## added bash_profile_git_completion
