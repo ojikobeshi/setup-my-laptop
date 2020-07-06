@@ -20,4 +20,4 @@ git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
 
 [ ! -e "/Applications/Google Chrome.app" ] && brew cask install google-chrome
 [ ! -e "/Applications/iTerm.app" ] && brew cask install iterm2
-[ ! -e `which code` ] && brew cask install visual-studio-code
+[ ! -e "/usr/local/bin/code" ] && brew cask install visual-studio-code
