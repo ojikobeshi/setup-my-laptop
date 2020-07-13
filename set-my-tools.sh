@@ -20,6 +20,8 @@ brew cask install virtualbox virtualbox-extension-pack
 if [ ! -e "${HOME}/.bash_it/install.sh" ]; then
     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
     bash ~/.bash_it/install.sh
+
+    # TODO: enable zork theme via sed
 fi
 
 # brew install bash-completion
